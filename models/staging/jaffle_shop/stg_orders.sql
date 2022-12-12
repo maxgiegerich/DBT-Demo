@@ -4,4 +4,4 @@ select
     order_date,
     status
 
-from MG_FROSTY_FRIDAY.jaffle_shop.orders
+from {{ source('jaffle_shop', 'orders') }}

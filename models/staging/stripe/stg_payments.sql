@@ -8,7 +8,7 @@ select
     amount / 100 as amount,
     created as created_at
 
-from MG_FROSTY_FRIDAY.stripe.payment 
-
+from {{source ('stripe','payment')}}
+WHERE status = 'success'
 
 -- TO DO - Create fct_orders
