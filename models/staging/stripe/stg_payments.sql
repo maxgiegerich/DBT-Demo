@@ -10,5 +10,3 @@ select
 
 from {{source ('stripe','payment')}}
 WHERE status = 'success'
-
--- TO DO - Create fct_orders
