@@ -10,3 +10,12 @@ sources:
         freshness:
           warn_after: {count: 12, period: hour}
           error_after: {count: 24, period: hour}
+        columns: 
+        - name: payment_id
+          description: Identifier for the payment
+        - name: order_id
+          description: Identifier for the order. Links to Orders table.
+        - name: payment_method
+          description: Type of payment made
+        - name: status
+          description: '{{ doc("order_status")}}'
